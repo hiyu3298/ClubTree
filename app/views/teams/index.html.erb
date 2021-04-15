@@ -4,7 +4,11 @@
   <th>チーム名</th>
   <th>ジャンル</th>
 </tr>
-<tr>
-  <td></td>
-  <td></td>
-</tr>
+<% @teams.each do |team| %>
+  <tr>
+    <td><%= link_to team.name, team_path(team) %></td>
+    <td><%= team.genre.name %></td>
+  </tr>
+<% end %>
+
+<%= link_to "チームを登録する", new_team_path %>
