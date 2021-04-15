@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210414074142) do
+ActiveRecord::Schema.define(version: 20210415013014) do
+
+  create_table "teams", force: :cascade do |t|
+    t.integer  "genre_id",                       null: false
+    t.string   "name",                           null: false
+    t.string   "image_id"
+    t.text     "introduction"
+    t.integer  "admission_fee",   default: 0,    null: false
+    t.integer  "membership_fee",  default: 0,    null: false
+    t.string   "activity_day",                   null: false
+    t.string   "activity_time",                  null: false
+    t.string   "place",                          null: false
+    t.boolean  "activity_status", default: true, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
