@@ -11,7 +11,7 @@
   <body>
     <% if user_signed_in? %>
       <li>
-        <%= link_to "My Page" %>
+        <%= link_to "My Page", customer_path(current_user) %>
       </li>
       <li>
         <%= link_to "Club Team", teams_path %>
