@@ -17,12 +17,18 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @team = Team.find(params[:id])
   end
 
   def edit
+    @team = Team.find(params[:id])
   end
 
   def update
+    team = Team.find(params[:id])
+    team.update(team_params)
+
+    redirect_to team_path(team)
   end
 
   private

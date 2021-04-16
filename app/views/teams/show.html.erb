@@ -1,1 +1,28 @@
 <h1>Club Team詳細</h1>
+
+<div>
+  <tr>
+    <th>チーム名</th>
+    <th>ジャンル</th>
+    <th>どんなチーム？</th>
+    <th>入会費</th>
+    <th>会費</th>
+    <th>活動曜日</th>
+    <th>活動時間</th>
+    <th>活動場所</th>
+    <th>活動状況</th>
+  </tr>
+  <tr>
+    <td><%= @team.name %></td>
+    <td><%= @team.genre.name %></td>
+    <td><%= @team.introduction %></td>
+    <td><%= @team.admission_fee %></td>
+    <td><%= @team.membership_fee %></td>
+    <td><%= @team.activity_day %></td>
+    <td><%= @team.activity_time %></td>
+    <td><%= @team.place %></td>
+    <td><%= @team.activity_status %></td>
+  </tr>
+</div>
+
+<%= link_to "チームの編集を行う", edit_team_path(@team) %>

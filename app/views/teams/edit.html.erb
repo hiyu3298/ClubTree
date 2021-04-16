@@ -1,0 +1,41 @@
+<h1>Club Team編集</h1>
+
+<%= form_with model: @team do |f| %>
+  <div>
+    <%= f.label :name, "チーム名" %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :genre_id, "ジャンル" %>
+    <%= f.select :genre_id, [['野球', 1], ['サッカー', 2], ['バスケットボール', 3]], include_blank: "選択して下さい" %>
+  </div>
+  <div>
+    <%= f.label :introduction, "説明" %>
+    <%= f.text_area :introduction %>
+  </div>
+  <div>
+    <%= f.label :admission_fee, "入会費" %>
+    <%= f.text_field :admission_fee %>
+  </div>
+  <div>
+    <%= f.label :membership_fee, "会費" %>
+    <%= f.text_field :membership_fee %>
+  </div>
+  <div>
+    <%= f.label :activity_day, "活動日" %>
+    <%= f.text_field :activity_day %>
+  </div>
+  <div>
+    <%= f.label :activity_time, "活動時間" %>
+    <%= f.text_field :activity_time %>
+  </div>
+  <div>
+    <%= f.label :place, "活動場所" %>
+    <%= f.text_field :place %>
+  </div>
+  <div>
+    <%= f.label :image, "写真" %>
+    <%= f.attachment_field :image %>
+  </div>
+  <%= f.submit "チームを編集する" %>
+<% end %>
